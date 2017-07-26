@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/module_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_5dp">
+
+            <ImageView
+                android:id="@+id/module_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dimen_5dp" />
+
+            <TextView
+                android:id="@+id/module_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/module_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/module_title_layout"
+            android:clipToPadding="false"
+            android:paddingLeft="@dimen/dimen_8dp"
+            android:paddingRight="@dimen/dimen_8dp" />
+
+        <TextView
+            android:id="@+id/view_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/module_recycler"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:gravity="center"
+            android:padding="@dimen/dimen_8dp"
+            android:text="@string/view_more"
+            android:textColor="@color/alpha_grey_dark"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

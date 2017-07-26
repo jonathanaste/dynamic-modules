@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_2dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/title_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/image"
+            android:background="@drawable/title_gradient"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_5dp">
+
+            <com.playtown.baseapp.utils.TypefaceTextView
+                android:id="@+id/title"
+                style="@style/BodyStyleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textColor="@android:color/white"
+                app:typeText="body" />
+
+            <com.playtown.baseapp.utils.TypefaceTextView
+                android:id="@+id/category"
+                style="@style/FooterStyleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:typeText="footer" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
