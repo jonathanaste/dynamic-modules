@@ -13,7 +13,8 @@ public interface RequestApiEndpoints {
 
     @GET("public//?action=log_sms")
     Observable<ResponseBody> exampleCall(@Query("param1") String param1, @Query("param2") String param2);
-    @GET("public//?action=get_home")
+    @GET("v2/5b0d65c431000049009d568b")
     Observable<HomeResponse> getHome();
-
+//    @GET("public//?action=get_home")
+//    Observable<HomeResponse> getHome();
 }

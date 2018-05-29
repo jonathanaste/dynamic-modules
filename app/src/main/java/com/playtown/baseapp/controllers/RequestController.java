@@ -26,6 +26,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 import static com.playtown.baseapp.utils.Constants.BASE_URL_APPS;
+import static com.playtown.baseapp.utils.Constants.MOCKY_URL_APPS;
 
 public class RequestController {
 
@@ -41,7 +42,7 @@ public class RequestController {
         RxJavaCallAdapterFactory rxAdapter = RxJavaCallAdapterFactory.createWithScheduler(Schedulers.io());
 
         Retrofit retrofitAsync = new Retrofit.Builder()
-                .baseUrl(BASE_URL_APPS)
+                .baseUrl(MOCKY_URL_APPS)
                 .client(createDefaultOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(rxAdapter)
